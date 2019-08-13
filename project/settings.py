@@ -13,11 +13,9 @@ DATABASES = {
 
 INSTALLED_APPS = ['datacenter']
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv("SECRET_KEY", "REPLACE_ME")
+SECRET_KEY = 'Businka'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DEBUG", "true").lower() in ['yes', '1', 'true']
+DEBUG = True
 
 ROOT_URLCONF = "project.urls"
 
