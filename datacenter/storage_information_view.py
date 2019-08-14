@@ -8,7 +8,7 @@ from datacenter.models import is_visit_long
 def storage_information_view(request):
     non_closed_visits = []
 
-    non_closed_visits_from_db = Visit.objects.exclude(leaved_at=None)
+    non_closed_visits_from_db = Visit.objects.filter(leaved_at=None)
 
     for non_closed_visit in non_closed_visits_from_db:
         duration = format_duration(get_duration(non_closed_visit))
